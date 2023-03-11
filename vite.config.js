@@ -20,4 +20,14 @@ export default defineConfig({
       "/assets": path.resolve(__dirname, "./src/assets"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          "primary-color": "#1890ff",
+        },
+        javascriptEnabled: true,
+      },
+    },
+  },
 });
