@@ -1,5 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import path from "path";
+
 //引入自动引入插件
 import AutoImport from "unplugin-auto-import/vite";
 
@@ -12,4 +14,9 @@ export default defineConfig({
       dts: "src/auto-import.d.ts",
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
